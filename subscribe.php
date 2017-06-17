@@ -3,10 +3,11 @@
 $email = $_POST['email'];
 
 if(isset($email) && !empty($email)) {
-	$for 	 = "rdvaldiv@gmail.com";
+	$for 	 = $email;
 	$from	 = "From: Tripget";
 	$subject = "Subscriber";
-	$message = $email;
+	$message = "Gracias por suscribirte";
+	
 	mail($for, $subject, $message, $from);
 } else {
 	echo "Datos inválidos";
